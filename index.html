@@ -1,27 +1,106 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <title>Lite's Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lite's portfolio — Roblox developer, web creator and student.">
+  <title>Lite | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <main class="hero">
-        <div class="card">
-            <div class="badge">✨ LITE'S WEBSITE</div>
+  <header class="nav">
+    <a class="logo" href="#home">LITE<span>.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-```
-        <h1>Welcome to my website!</h1>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">STUDENT • CREATOR • DEVELOPER</p>
+        <h1>Hi, I'm <span>Lite.</span></h1>
+        <p class="lead">I build Roblox games, websites, and creative digital projects while learning the skills for my future career.</p>
+        <div class="actions">
+          <a class="button primary" href="#projects">View my work</a>
+          <a class="button secondary" href="https://github.com/LiteEmpire" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="orbit"></div>
+        <div class="initial">L</div>
+        <p>Building today.<br><strong>Creating the future.</strong></p>
+      </div>
+    </section>
 
-        <p>I built this website from scratch.</p>
+    <section id="about" class="section">
+      <div class="section-heading"><p class="eyebrow">01 — ABOUT</p><h2>A portfolio that grows with me.</h2></div>
+      <div class="about-grid">
+        <p>I'm a student interested in game development, web development, technology, and content creation. I enjoy turning ideas into working projects and improving them step by step.</p>
+        <div class="info-card"><span>Currently</span><strong>Student & independent creator</strong></div>
+        <div class="info-card"><span>Based in</span><strong>Sharjah, UAE</strong></div>
+        <div class="info-card"><span>Focus</span><strong>Roblox • Web • Creative Tech</strong></div>
+      </div>
+    </section>
 
-        <button onclick="alert('Thanks for visiting! 🚀')">
-            Click Me
-        </button>
-    </div>
-</main>
-```
+    <section id="projects" class="section">
+      <div class="section-heading"><p class="eyebrow">02 — PROJECTS</p><h2>Things I've built.</h2></div>
+      <div class="project-grid">
+        <article class="project featured">
+          <div class="project-top"><span class="tag">ROBLOX GAME</span><span>01</span></div>
+          <h3>Escape the Glitch</h3>
+          <p>A Roblox obstacle/adventure project featuring checkpoints, progression, abilities, UI systems, codes, currency, admin events, and more.</p>
+          <div class="tech"><span>Roblox Studio</span><span>Luau</span><span>DataStore</span></div>
+          <a href="https://liteempire.github.io/escapetheglitch/" target="_blank" rel="noopener">View project ↗</a>
+        </article>
+        <article class="project">
+          <div class="project-top"><span class="tag">WEB</span><span>02</span></div>
+          <h3>GitHub Websites</h3>
+          <p>Web projects built and published with GitHub, using HTML and CSS and learning modern web development along the way.</p>
+          <div class="tech"><span>HTML</span><span>CSS</span><span>GitHub</span></div>
+          <a href="https://github.com/LiteEmpire" target="_blank" rel="noopener">See GitHub ↗</a>
+        </article>
+        <article class="project">
+          <div class="project-top"><span class="tag">CONTENT</span><span>03</span></div>
+          <h3>Lite Official</h3>
+          <p>My gaming/content brand focused on Roblox and creating entertaining videos with the goal of making people laugh.</p>
+          <div class="tech"><span>YouTube</span><span>Roblox</span><span>Creator</span></div>
+          <a href="https://youtube.com/@liteofficialyt" target="_blank" rel="noopener">Visit channel ↗</a>
+        </article>
+      </div>
+    </section>
 
+    <section id="skills" class="section">
+      <div class="section-heading"><p class="eyebrow">03 — SKILLS</p><h2>What I'm learning.</h2></div>
+      <div class="skills">
+        <div class="skill"><b>Roblox Development</b><span>Roblox Studio • Luau • Game systems</span></div>
+        <div class="skill"><b>Web Development</b><span>HTML • CSS • GitHub Pages</span></div>
+        <div class="skill"><b>Creative Tech</b><span>UI • VFX concepts • AI-assisted workflows</span></div>
+        <div class="skill"><b>Content Creation</b><span>Gaming • YouTube • Short-form ideas</span></div>
+      </div>
+    </section>
+
+    <section class="section timeline">
+      <div class="section-heading"><p class="eyebrow">04 — JOURNEY</p><h2>Growing one project at a time.</h2></div>
+      <div class="timeline-item"><span>NOW</span><p><strong>Learning & building</strong><br>Developing Roblox games, websites and creator projects while studying.</p></div>
+      <div class="timeline-item"><span>NEXT</span><p><strong>Portfolio & experience</strong><br>Add certifications, internships, larger projects and achievements as they happen.</p></div>
+      <div class="timeline-item"><span>FUTURE</span><p><strong>Career</strong><br>Use this portfolio to showcase real work when applying for further study, internships and jobs.</p></div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <p class="eyebrow">05 — CONTACT</p>
+      <h2>Let's connect.</h2>
+      <p>Explore my work and follow my projects as I keep building.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/LiteEmpire" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="button secondary" href="https://youtube.com/@liteofficialyt" target="_blank" rel="noopener">YouTube ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Lite. Built with HTML & CSS.</footer>
 </body>
 </html>
