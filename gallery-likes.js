@@ -14,13 +14,22 @@ function getVisitorId(){
 const visitorId=getVisitorId();
 
 async function loadLikes(){
-  const {data,error}=await supabaseClient.from("gallery_likes").select("image_id,visitor_id");
-  if(error){console.error("Gallery likes:",error);return;}
+  const {data,error}=await supabaseClient
+    .from("gallery_likes")
+    .select("image_id,visitor_id");
+
+  if(error){
+    console.error("Gallery likes:",error);
+    return;
+  }
+
   document.querySelectorAll(".like-button").forEach(button=>{
     const id=button.dataset.imageId;
     const likes=data.filter(row=>row.image_id===id);
     const count=button.querySelector("b");
+
     count.textContent=likes.length;
+
     if(likes.some(row=>row.visitor_id===visitorId)){
       button.classList.add("liked");
       button.querySelector("span").textContent="Liked";
@@ -31,27 +40,36 @@ async function loadLikes(){
 
 async function likeImage(button){
   const id=button.dataset.imageId;
+
   if(button.classList.contains("liked")) return;
+
   button.disabled=true;
-  const {error}=await supabaseClient.from("gallery_likes").insert({
-    image_id:id,
-    visitor_id:visitorId
+
+  const {data,error}=await supabaseClient.rpc("like_gallery_image",{
+    p_image_id:id,
+    p_visitor_id:visitorId
   });
-  if(error && error.code!=="23505"){
+
+  if(error){
     console.error("Gallery like:",error);
     button.disabled=false;
     return;
   }
+
   button.classList.add("liked");
   button.querySelector("span").textContent="Liked";
   button.firstChild.textContent="♥ ";
+
   const count=button.querySelector("b");
-  count.textContent=Number(count.textContent)+1;
+  count.textContent=data ?? Number(count.textContent)+1;
+
   button.disabled=false;
 }
 
-document.querySelectorAll(".like-button").forEach(button=>{
-  button.addEventListener("click",()=>likeImage(button));
-});
+document.addEventListener("DOMContentLoaded",()=>{
+  document.querySelectorAll(".like-button").forEach(button=>{
+    button.addEventListener("click",()=>likeImage(button));
+  });
 
-loadLikes();
+  loadLikes();
+});
