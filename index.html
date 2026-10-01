@@ -112,17 +112,29 @@
     </section>
 
     <section id="settings" class="section settings-section">
-      <div class="section-heading"><p class="eyebrow">07 — SETTINGS</p><h2>Portfolio settings.</h2></div>
+      <div class="section-heading"><p class="eyebrow">07 — SETTINGS</p><h2>User-interface settings.</h2></div>
       <div class="settings-grid">
-        <div class="setting-card"><span>Theme</span><strong>Dark</strong><p>Designed for a clean, focused portfolio experience.</p></div>
-        <div class="setting-card"><span>Gallery</span><strong>Natural image size</strong><p>Images are displayed without forced cropping or stretching.</p></div>
-        <div class="setting-card"><span>Layout</span><strong>Responsive</strong><p>The portfolio adapts to desktop, tablet, and mobile screens.</p></div>
-        <div class="setting-card"><span>Animations</span><strong>Enabled</strong><p>Subtle hover and scrolling effects keep the interface lively.</p></div>
+        <div class="setting-card">
+          <div><span>Theme</span><strong>Dark interface</strong><p>Switch between the dark and light portfolio interface.</p></div>
+          <label class="toggle"><input type="checkbox" id="themeToggle" aria-label="Toggle light theme"><span></span></label>
+        </div>
+        <div class="setting-card">
+          <div><span>Animations</span><strong>Interface animations</strong><p>Control hover and scrolling animations.</p></div>
+          <label class="toggle"><input type="checkbox" id="animationToggle" checked aria-label="Toggle animations"><span></span></label>
+        </div>
+        <div class="setting-card">
+          <div><span>Gallery</span><strong>Natural image size</strong><p>Images stay at their natural proportions without forced cropping.</p></div>
+          <span class="setting-status">DEFAULT</span>
+        </div>
+        <div class="setting-card">
+          <div><span>Layout</span><strong>Responsive interface</strong><p>The portfolio automatically adapts to desktop, tablet, and mobile screens.</p></div>
+          <span class="setting-status">AUTO</span>
+        </div>
       </div>
     </section>
 
     <section id="contact" class="section contact">
-      <p class="eyebrow">06 — CONTACT</p>
+      <p class="eyebrow">08 — CONTACT</p>
       <h2>Let's connect.</h2>
       <p>Explore my work and follow my projects as I keep building.</p>
       <div class="actions">
@@ -135,5 +147,6 @@
   </main>
 
   <footer>© 2026 Lite. Built with HTML & CSS.</footer>
+<script src="settings.js"></script>
 </body>
 </html>
