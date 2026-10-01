@@ -17,3 +17,12 @@ body.light-theme .timeline-item{border-color:#dce3eb}
 body.light-theme footer{border-color:#d9e0e8}
 body.no-animations *,body.no-animations *::before,body.no-animations *::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 @media(max-width:800px){.setting-card{align-items:flex-start}}
+
+.gallery-item{padding-bottom:12px}
+.like-button{display:flex;align-items:center;gap:7px;margin:12px auto 0;padding:8px 14px;border:1px solid #293446;border-radius:999px;background:#111925;color:#aab5c5;font:inherit;font-size:.85rem;font-weight:800;cursor:pointer;transition:.2s}
+.like-button:hover{transform:translateY(-1px);border-color:#bef264;color:#fff}
+.like-button b{color:#bef264}
+.like-button.liked{background:#bef264;color:#0a1006;border-color:#bef264}
+.like-button.liked b{color:#0a1006}
+body.light-theme .like-button{background:#fff;border-color:#d5dde7;color:#526071}
+body.light-theme .like-button.liked{background:#bef264;border-color:#bef264;color:#0a1006}
